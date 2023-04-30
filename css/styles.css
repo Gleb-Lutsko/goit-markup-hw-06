@@ -436,7 +436,7 @@ img{
     margin-left: 120px;
 }
 .form-footer-container{
-    margin-left: 80px;
+    margin-left: auto;
 }
 .footer-form{
     display: flex;
@@ -632,7 +632,6 @@ img{
     left: 50%;
 
     width: 408px;
-    height: 584px;
     padding: 72px 24px 24px 24px;
 
     background: #FCFCFC;
@@ -656,13 +655,16 @@ img{
     background: var(--border-color-filter);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-
+    transition: background-color var(--transition-dur-and-func);
 }
-.modal-btn:active,
+.modal-btn:hover,
 .modal-btn:focus{
     background-color: var(--hover-color);
 }
-.modal-btn:active .icon-close-modal,
+.icon-close-modal{
+    transition: fill var(--transition-dur-and-func);
+}
+.modal-btn:hover .icon-close-modal,
 .modal-btn:focus .icon-close-modal{
  fill: var(--white-color);
 }
@@ -674,9 +676,14 @@ img{
     margin-bottom: 16px;
     font-weight: 500;
     font-size: 16px;
+    line-height: 1.5;
     text-align: center;
 }
 .modal-label{
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
     height: 14px;
     display: block;
     margin-bottom: 4px;
@@ -725,12 +732,6 @@ img{
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
-}
-.modal-label-text{
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-    color:  #8E8F99;
 }
 .input-icon{
     position: absolute;
